@@ -1,0 +1,14 @@
+.DS_Store
+
+# Per-user signing settings written by scripts/install.sh
+Config/Local.xcconfig
+
+# Build output
+build/
+dist/
+DerivedData/
+
+# Xcode user state
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/

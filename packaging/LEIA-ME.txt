@@ -1,0 +1,53 @@
+SharePoint Video Downloader — instalação / installation
+=======================================================
+
+PORTUGUÊS
+
+Este app não é assinado por um desenvolvedor Apple registrado, então o macOS
+e o Safari pedem alguns passos extras.
+
+1. Arraste "SharePoint Video Downloader" para a pasta Aplicativos (Applications).
+
+2. Abra o app pela primeira vez:
+   - Dê dois cliques no app. O macOS vai dizer que não pode verificá-lo. Clique em "OK".
+   - Abra Ajustes do Sistema → Privacidade e Segurança, role até o fim e clique
+     em "Abrir Mesmo Assim" ao lado de "SharePoint Video Downloader".
+   - Confirme com "Abrir Mesmo Assim" e sua senha.
+   (Alternativa no Terminal: xattr -dr com.apple.quarantine "/Applications/SharePoint Video Downloader.app")
+
+3. Instale as ferramentas de download: na janela do app, clique em "Install"
+   (usa o Homebrew: brew install yt-dlp ffmpeg).
+
+4. Habilite a extensão no Safari:
+   - Safari → Ajustes → Avançado → marque "Mostrar recursos para desenvolvedores web".
+   - Safari → Ajustes → Desenvolvedor → marque "Permitir extensões não assinadas"
+     (o Safari desmarca essa opção sempre que é fechado; marque de novo ao reabrir).
+   - Safari → Ajustes → Extensões → ative "SharePoint Video Downloader" e permita
+     o acesso a sharepoint.com.
+
+5. Abra um vídeo do SharePoint/Stream. O botão da barra fica azul quando o vídeo
+   é detectado. Clique nele e o download começa no app.
+   Os vídeos vão para Downloads/SharePoint Videos (dá para mudar no app).
+
+Respeite as regras da sua empresa e os direitos de quem publicou os vídeos.
+Projeto sem ligação com a Microsoft.
+
+
+ENGLISH
+
+This app isn't signed by a registered Apple developer, so macOS and Safari need
+a few extra steps.
+
+1. Drag "SharePoint Video Downloader" to the Applications folder.
+2. First launch: double-click the app and click "OK" on the warning, then open
+   System Settings → Privacy & Security and click "Open Anyway".
+   (Or in Terminal: xattr -dr com.apple.quarantine "/Applications/SharePoint Video Downloader.app")
+3. In the app, click "Install" to get yt-dlp and ffmpeg via Homebrew.
+4. Safari → Settings → Advanced → "Show features for web developers".
+   Safari → Settings → Developer → "Allow unsigned extensions" (resets every time
+   Safari quits). Then Safari → Settings → Extensions → enable the extension and
+   allow it on sharepoint.com.
+5. Open a SharePoint/Stream video; the toolbar button turns blue. Click it.
+
+Respect your organisation's rules and the rights of whoever published the videos.
+Not affiliated with Microsoft.

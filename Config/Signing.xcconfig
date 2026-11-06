@@ -1,0 +1,13 @@
+// Signing defaults. Don't edit this file for your own build:
+// scripts/install.sh writes your Apple team and bundle prefix to Config/Local.xcconfig
+// (git-ignored), which overrides the values below.
+
+// Reverse-DNS prefix for the app and extension bundle IDs. Must be unique to you
+// when signing with your own Apple team.
+SPVD_BUNDLE_PREFIX = com.henriquefinazzi
+
+// Empty = no team (ad-hoc signing, like the release DMG).
+DEVELOPMENT_TEAM =
+CODE_SIGN_STYLE = Automatic
+
+#include? "Local.xcconfig"

@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "SharePoint Video Downloader",
+  "version": "1.0",
+  "description": "Download view-only SharePoint and Stream videos with one click.",
+  "permissions": ["activeTab", "scripting", "nativeMessaging", "tabs"],
+  "host_permissions": [
+    "*://*.sharepoint.com/*",
+    "*://*.svc.ms/*",
+    "*://*.microsoftstream.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.sharepoint.com/*",
+        "*://*.svc.ms/*",
+        "*://*.microsoftstream.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "type": "module"
+  },
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  },
+  "action": {
+    "default_title": "Download this video",
+    "default_icon": {
+      "16": "images/toolbar-16.png",
+      "19": "images/toolbar-19.png",
+      "32": "images/toolbar-32.png",
+      "38": "images/toolbar-38.png",
+      "48": "images/toolbar-48.png",
+      "64": "images/toolbar-64.png",
+      "96": "images/toolbar-96.png",
+      "128": "images/toolbar-128.png"
+    }
+  }
+}

@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CF3CBCE41F944CDDE6A6CD /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = E06C233C8000541F30F35B80 /* background.js */; };
+		31CE92121CB73B8CE6774F49 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5AED285E52DEE0F92E62E8 /* SafariWebExtensionHandler.swift */; };
+		562386070B29469C75A4AA42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00E82808D16BA146A4919F9 /* ContentView.swift */; };
+		62FC8EEC6F097DFDA72D3EA4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F410E1B3CDEDA6CEB6E8780 /* DownloadManager.swift */; };
+		6C7C430B149543E604E9C94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C45EB739D3B6EF1A0AA877 /* Assets.xcassets */; };
+		8D7B469DA04D620525F0ABF7 /* SPVideoDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC18E7DECB729957E368FCEA /* SPVideoDownloaderApp.swift */; };
+		A830AF77511DC203B6440056 /* SPVideoDownloaderExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 49D6608273D2F4C1B9783E96 /* SPVideoDownloaderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B0878BB629259A133828B629 /* images in Resources */ = {isa = PBXBuildFile; fileRef = DADF960F6CCC58165D13786F /* images */; };
+		B7B6DF39A47144DC871CD8FE /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 98940CB25518D72D2ADDFA08 /* content.js */; };
+		E742D08BDC01CC3632B4BDAB /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 67635CAF2B6418D3A216EE0A /* manifest.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17717AD0CD3C9B6C0D4B4B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8819CCE4BBA59624E117C4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3171627E758128561539DD0;
+			remoteInfo = SPVideoDownloaderExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D473010B1DBEE986E4DBA662 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A830AF77511DC203B6440056 /* SPVideoDownloaderExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F410E1B3CDEDA6CEB6E8780 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		3B2F594557022745AA068F66 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
+		49D6608273D2F4C1B9783E96 /* SPVideoDownloaderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SPVideoDownloaderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		67635CAF2B6418D3A216EE0A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		8A5AED285E52DEE0F92E62E8 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8F33B2FFC0A109EBFEA4AEA1 /* SPVideoDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPVideoDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98940CB25518D72D2ADDFA08 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		A51E79B86A79D63A64E89477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C00E82808D16BA146A4919F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC18E7DECB729957E368FCEA /* SPVideoDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPVideoDownloaderApp.swift; sourceTree = "<group>"; };
+		D6CA2AB2F3D672C24B56B4CD /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		DADF960F6CCC58165D13786F /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = WebExtension/images; sourceTree = SOURCE_ROOT; };
+		E06C233C8000541F30F35B80 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		E4479C660112A1E0CA487389 /* Signing.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Signing.xcconfig; sourceTree = "<group>"; };
+		E8599398C7D27289743B7A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F8C45EB739D3B6EF1A0AA877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		09C0F6C65C4E355CD17F072E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D6CA2AB2F3D672C24B56B4CD /* App.entitlements */,
+				F8C45EB739D3B6EF1A0AA877 /* Assets.xcassets */,
+				C00E82808D16BA146A4919F9 /* ContentView.swift */,
+				1F410E1B3CDEDA6CEB6E8780 /* DownloadManager.swift */,
+				A51E79B86A79D63A64E89477 /* Info.plist */,
+				CC18E7DECB729957E368FCEA /* SPVideoDownloaderApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1BDA066653E8B3BB29543808 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E4479C660112A1E0CA487389 /* Signing.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7DC9DB325E91D60BBE49B73C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3B2F594557022745AA068F66 /* Extension.entitlements */,
+				E8599398C7D27289743B7A1E /* Info.plist */,
+				8A5AED285E52DEE0F92E62E8 /* SafariWebExtensionHandler.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AD20177E938572C0D89F666F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F33B2FFC0A109EBFEA4AEA1 /* SPVideoDownloader.app */,
+				49D6608273D2F4C1B9783E96 /* SPVideoDownloaderExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2518FBC9642B7B415619A45 /* WebExtension */ = {
+			isa = PBXGroup;
+			children = (
+				E06C233C8000541F30F35B80 /* background.js */,
+				98940CB25518D72D2ADDFA08 /* content.js */,
+				DADF960F6CCC58165D13786F /* images */,
+				67635CAF2B6418D3A216EE0A /* manifest.json */,
+			);
+			path = WebExtension;
+			sourceTree = "<group>";
+		};
+		CA6CD32ADAFCF006F9CB7720 = {
+			isa = PBXGroup;
+			children = (
+				09C0F6C65C4E355CD17F072E /* App */,
+				1BDA066653E8B3BB29543808 /* Config */,
+				7DC9DB325E91D60BBE49B73C /* Extension */,
+				C2518FBC9642B7B415619A45 /* WebExtension */,
+				AD20177E938572C0D89F666F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		914977453247B2634F766C3B /* SPVideoDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C19BF70DF590D0CE5D7F07D8 /* Build configuration list for PBXNativeTarget "SPVideoDownloader" */;
+			buildPhases = (
+				7133351213D61A68DCC802F6 /* Sources */,
+				59B10C33BD5112A7E2AAB5B6 /* Resources */,
+				D473010B1DBEE986E4DBA662 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA94B83E764C10BD5521E379 /* PBXTargetDependency */,
+			);
+			name = SPVideoDownloader;
+			packageProductDependencies = (
+			);
+			productName = SPVideoDownloader;
+			productReference = 8F33B2FFC0A109EBFEA4AEA1 /* SPVideoDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3171627E758128561539DD0 /* SPVideoDownloaderExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A63BA34764F2AFDFBE970EE /* Build configuration list for PBXNativeTarget "SPVideoDownloaderExtension" */;
+			buildPhases = (
+				0A066FBFD3100AFCA8A4E49A /* Sources */,
+				31B768C6786FD910CF4B62AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPVideoDownloaderExtension;
+			packageProductDependencies = (
+			);
+			productName = SPVideoDownloaderExtension;
+			productReference = 49D6608273D2F4C1B9783E96 /* SPVideoDownloaderExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8819CCE4BBA59624E117C4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					914977453247B2634F766C3B = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					D3171627E758128561539DD0 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7DF7927AA67CB98C708C639D /* Build configuration list for PBXProject "SPVideoDownloader" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CA6CD32ADAFCF006F9CB7720;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = AD20177E938572C0D89F666F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				914977453247B2634F766C3B /* SPVideoDownloader */,
+				D3171627E758128561539DD0 /* SPVideoDownloaderExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31B768C6786FD910CF4B62AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CF3CBCE41F944CDDE6A6CD /* background.js in Resources */,
+				B7B6DF39A47144DC871CD8FE /* content.js in Resources */,
+				B0878BB629259A133828B629 /* images in Resources */,
+				E742D08BDC01CC3632B4BDAB /* manifest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59B10C33BD5112A7E2AAB5B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C7C430B149543E604E9C94E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A066FBFD3100AFCA8A4E49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31CE92121CB73B8CE6774F49 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7133351213D61A68DCC802F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				562386070B29469C75A4AA42 /* ContentView.swift in Sources */,
+				62FC8EEC6F097DFDA72D3EA4 /* DownloadManager.swift in Sources */,
+				8D7B469DA04D620525F0ABF7 /* SPVideoDownloaderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA94B83E764C10BD5521E379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3171627E758128561539DD0 /* SPVideoDownloaderExtension */;
+			targetProxy = 17717AD0CD3C9B6C0D4B4B21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		302A32C04D0DD8AC77901170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SPVD_BUNDLE_PREFIX).SPVideoDownloader.Extension";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		65CE4C73B86BABED07562F27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SPVD_BUNDLE_PREFIX).SPVideoDownloader.Extension";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8E93540AC4C21EDBF5637DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4479C660112A1E0CA487389 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C61207CCAFDA06F4FDC44774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SPVD_BUNDLE_PREFIX).SPVideoDownloader";
+				PRODUCT_MODULE_NAME = SPVideoDownloader;
+				PRODUCT_NAME = "SharePoint Video Downloader";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C80C146FCDA00F58C4B3D58E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(SPVD_BUNDLE_PREFIX).SPVideoDownloader";
+				PRODUCT_MODULE_NAME = SPVideoDownloader;
+				PRODUCT_NAME = "SharePoint Video Downloader";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D1F9886423B692F364063874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4479C660112A1E0CA487389 /* Signing.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A63BA34764F2AFDFBE970EE /* Build configuration list for PBXNativeTarget "SPVideoDownloaderExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				302A32C04D0DD8AC77901170 /* Debug */,
+				65CE4C73B86BABED07562F27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7DF7927AA67CB98C708C639D /* Build configuration list for PBXProject "SPVideoDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E93540AC4C21EDBF5637DBB /* Debug */,
+				D1F9886423B692F364063874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C19BF70DF590D0CE5D7F07D8 /* Build configuration list for PBXNativeTarget "SPVideoDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61207CCAFDA06F4FDC44774 /* Debug */,
+				C80C146FCDA00F58C4B3D58E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8819CCE4BBA59624E117C4A /* Project object */;
+}

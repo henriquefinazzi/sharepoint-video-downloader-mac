@@ -1,0 +1,72 @@
+# Maintainers: regenerate the committed Xcode project with `xcodegen generate`.
+# Signing (team, bundle prefix) lives in Config/Signing.xcconfig + Config/Local.xcconfig.
+name: SPVideoDownloader
+options:
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+configFiles:
+  Debug: Config/Signing.xcconfig
+  Release: Config/Signing.xcconfig
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: NO
+targets:
+  SPVideoDownloader:
+    type: application
+    platform: macOS
+    sources:
+      - App
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: SharePoint Video Downloader
+        LSApplicationCategoryType: public.app-category.utilities
+        NSHumanReadableCopyright: Personal use
+        CFBundleURLTypes:
+          - CFBundleURLName: $(PRODUCT_BUNDLE_IDENTIFIER)
+            CFBundleURLSchemes: [spvd]
+    entitlements:
+      path: App/App.entitlements
+      properties: {}
+    settings:
+      base:
+        PRODUCT_NAME: SharePoint Video Downloader
+        PRODUCT_MODULE_NAME: SPVideoDownloader
+        PRODUCT_BUNDLE_IDENTIFIER: $(SPVD_BUNDLE_PREFIX).SPVideoDownloader
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - target: SPVideoDownloaderExtension
+        embed: true
+
+  SPVideoDownloaderExtension:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: Extension
+      - path: WebExtension/manifest.json
+        buildPhase: resources
+      - path: WebExtension/background.js
+        buildPhase: resources
+      - path: WebExtension/content.js
+        buildPhase: resources
+      - path: WebExtension/images
+        type: folder
+        buildPhase: resources
+    info:
+      path: Extension/Info.plist
+      properties:
+        CFBundleDisplayName: SharePoint Video Downloader
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.Safari.web-extension
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).SafariWebExtensionHandler
+    entitlements:
+      path: Extension/Extension.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(SPVD_BUNDLE_PREFIX).SPVideoDownloader.Extension
