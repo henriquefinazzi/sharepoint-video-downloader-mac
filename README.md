@@ -2,6 +2,11 @@
   <img src="App/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="128" alt="App icon">
   <h1>SharePoint Video Downloader for Mac</h1>
   <p>Download view-only SharePoint and Microsoft Stream videos from Safari with one click.</p>
+  <p>
+    <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/henriquefinazzi/sharepoint-video-downloader-mac" alt="Latest release"></a>
+    <img src="https://img.shields.io/badge/macOS-14%2B-blue" alt="macOS 14+">
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPLv3-green" alt="GPLv3"></a>
+  </p>
 </div>
 
 > 🇧🇷 [Leia em português](#português)
