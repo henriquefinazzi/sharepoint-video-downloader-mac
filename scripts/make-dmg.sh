@@ -32,10 +32,28 @@ xcodebuild -project SPVideoDownloader.xcodeproj -scheme SPVideoDownloader -confi
   ARCHS="arm64 x86_64" ONLY_ACTIVE_ARCH=NO \
   CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY="-" DEVELOPMENT_TEAM="" PROVISIONING_PROFILE_SPECIFIER="" \
   SPVD_BUNDLE_PREFIX="${SPVD_RELEASE_BUNDLE_PREFIX:-com.henriquefinazzi}" \
+  DEPLOYMENT_POSTPROCESSING=YES STRIP_INSTALLED_PRODUCT=YES STRIP_STYLE=non-global \
+  COPY_PHASE_STRIP=YES CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO \
   build
 
 APP="$BUILD_DIR/Build/Products/Release/$APP_NAME.app"
 codesign --verify --deep --strict "$APP"
+
+# Refuse to ship anything that reveals the build machine: debug symbols carry
+# absolute source paths (user name, folder layout), and get-task-allow lets a
+# debugger attach.
+binaries=("$APP/Contents/MacOS/"* "$APP/Contents/PlugIns/"*.appex/Contents/MacOS/*)
+for bin in "${binaries[@]}"; do
+  if nm -a "$bin" 2>/dev/null | grep -qE "$HOME|/Users/|/var/folders/" \
+     || strings -a "$bin" | grep -qE "$HOME|/var/folders/"; then
+    echo "Error: $bin still contains local build paths." >&2; exit 1
+  fi
+done
+for bundle in "$APP" "$APP/Contents/PlugIns/"*.appex; do
+  if codesign -d --entitlements - "$bundle" 2>/dev/null | grep -q get-task-allow; then
+    echo "Error: $bundle is signed with get-task-allow (debug entitlement)." >&2; exit 1
+  fi
+done
 
 mkdir -p "$STAGE" "$OUT_DIR"
 ditto "$APP" "$STAGE/$APP_NAME.app"
